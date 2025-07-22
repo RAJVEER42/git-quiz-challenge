@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Quiz - Master Version Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-text">Dark</span>
+    </button>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="header-brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9.5 2A7.5 7.5 0 0 0 4 10c0 6 3.5 9 6.5 9a7.5 7.5 0 0 0 0-15Z"/>
+                        <path d="M15.5 2c3.5 0 6.5 4 6.5 9s-3 9-6.5 9a7.5 7.5 0 0 1 0-15Z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="brand-title">Git & GitHub Quiz</h1>
+                    <p class="brand-subtitle">Master version control with interactive challenges</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="main-container">
+        <div class="content-wrapper">
+            <!-- Quiz Home Screen -->
+            <div id="quiz-home-screen" class="screen active">
+                <div class="quiz-home-content">
+                    <!-- Hero Section -->
+                    <div class="hero-section">
+                        <div class="hero-icons">
+                            <div class="hero-icon hero-icon-1">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.9 1 3 1.9 3 3V21C3 22.1 3.9 23 5 23H19C20.1 23 21 22.1 21 21V9M19 21H5V3H13V9H19V21Z"/>
+                                </svg>
+                            </div>
+                            <div class="hero-icon hero-icon-2">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 3C9.1 3 10 3.9 10 5V17C10 18.1 9.1 19 8 19C6.9 19 6 18.1 6 17V5C6 3.9 6.9 3 8 3ZM16 12C17.1 12 18 12.9 18 14V17C18 18.1 17.1 19 16 19C14.9 19 14 18.1 14 17V14C14 12.9 14.9 12 16 12Z"/>
+                                </svg>
+                            </div>
+                            <div class="hero-icon hero-icon-3">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17,12C17,14.42 16.28,16.45 14.12,16.45C13.67,16.45 13.25,16.36 12.83,16.17C12.18,15.87 11.7,15.27 11.7,14.5C11.7,13.73 12.18,13.13 12.83,12.83C13.25,12.64 13.67,12.55 14.12,12.55C16.28,12.55 17,14.58 17,17V12M7,12C7,14.42 7.72,16.45 9.88,16.45C10.33,16.45 10.75,16.36 11.17,16.17C11.82,15.87 12.3,15.27 12.3,14.5C12.3,13.73 11.82,13.13 11.17,12.83C10.75,12.64 10.33,12.55 9.88,12.55C7.72,12.55 7,14.58 7,17V12Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-text">
+                            <h1 class="hero-title">Master Git & GitHub</h1>
+                            <p class="hero-description">
+                                Test your knowledge with our comprehensive quiz system. From basic commands to advanced workflows, 
+                                challenge yourself and become a Git expert.
+                            </p>
+                        </div>
+                        
+                        <!-- Quick Stats -->
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value">20+</div>
+                                <div class="stat-label">Questions Available</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">95%</div>
+                                <div class="stat-label">Success Rate</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">4</div>
+                                <div class="stat-label">Categories</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">∞</div>
+                                <div class="stat-label">Practice</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Categories -->
+                    <div class="categories-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Choose Your Challenge</h2>
+                            <p class="section-subtitle">Select a category to test your Git knowledge</p>
+                        </div>
+                        
+                        <div class="categories-grid" id="quiz-categories">
+                            <!-- Categories will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Features Section -->
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon feature-icon-1">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Instant Feedback</h3>
+                            <p class="feature-description">Get immediate explanations for every answer to learn as you go</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon feature-icon-2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                    <path d="M4 22h16l-8-9-8 9Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Track Progress</h3>
+                            <p class="feature-description">Monitor your improvement with detailed score analytics</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon feature-icon-3">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Real Scenarios</h3>
+                            <p class="feature-description">Practice with questions based on real-world Git usage</p>
+                        </div>
+                    </div>
+
+                    <!-- Learning Tips -->
+                    <div class="tips-section">
+                        <h3 class="tips-title">💡 Pro Learning Tips</h3>
+                        
+                        <div class="tips-grid">
+                            <div class="tips-column">
+                                <div class="tip-item">
+                                    <div class="tip-number tip-number-1">1</div>
+                                    <div class="tip-content">
+                                        <h4 class="tip-title">Start with Basics</h4>
+                                        <p class="tip-description">Begin with "Getting Started" to build a solid foundation</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="tip-item">
+                                    <div class="tip-number tip-number-2">2</div>
+                                    <div class="tip-content">
+                                        <h4 class="tip-title">Read Explanations</h4>
+                                        <p class="tip-description">Don't skip the explanations - they contain valuable insights</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tips-column">
+                                <div class="tip-item">
+                                    <div class="tip-number tip-number-3">3</div>
+                                    <div class="tip-content">
+                                        <h4 class="tip-title">Practice Regularly</h4>
+                                        <p class="tip-description">Consistency is key - take quizzes regularly to retain knowledge</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="tip-item">
+                                    <div class="tip-number tip-number-4">4</div>
+                                    <div class="tip-content">
+                                        <h4 class="tip-title">Apply in Practice</h4>
+                                        <p class="tip-description">Use a real Git repository to practice the commands you learn</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="quiz-screen" class="screen">
+                <div class="quiz-header" id="quiz-header">
+                    <!-- Quiz header content will be populated by JavaScript -->
+                </div>
+                <div class="quiz-content" id="quiz-content">
+                    <!-- Quiz content will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Quiz Results Screen -->
+            <div id="quiz-results-screen" class="screen">
+                <div class="results-content" id="results-content">
+                    <!-- Results content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Built for developers learning Git & GitHub
+                </p>
+                <div class="footer-links">
+                    <span>© 2024 Git Quiz Challenge</span>
+                    <span>•</span>
+                    <span>Interactive Learning Platform</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
