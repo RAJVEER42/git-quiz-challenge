@@ -1,3 +1,7 @@
+<img width="1312" height="342" alt="image" src="https://github.com/user-attachments/assets/58aa0218-a871-4e03-8661-a0766623367c" />
+
+---
+
 <h1 align="center"> 🧠 Git & GitHub Quiz Challenge </h1>
 
 <div align="center">
