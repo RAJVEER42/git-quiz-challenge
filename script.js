@@ -123,7 +123,72 @@ const quizData = {
             correctAnswer: 1,
             explanation: 'git diff HEAD compares your working directory with the last commit (HEAD).',
             difficulty: 'medium'
-        }
+        },
+        {
+  id: '6',
+  question: 'Which command is used to clone a remote repository?',
+  options: [
+    'git copy',
+    'git clone',
+    'git fork',
+    'git download'
+  ],
+  correctAnswer: 1,
+  explanation: 'git clone is used to create a local copy of a remote repository.',
+  difficulty: 'easy'
+},
+{
+  id: '7',
+  question: 'What does "git branch" do?',
+  options: [
+    'Deletes a branch',
+    'Lists all branches and highlights the current branch',
+    'Merges two branches',
+    'Pushes a branch to remote'
+  ],
+  correctAnswer: 1,
+  explanation: 'git branch lists all branches and highlights the current branch with an asterisk (*).',
+  difficulty: 'easy'
+},
+{
+  id: '8',
+  question: 'What is the effect of "git checkout -b new-feature"?',
+  options: [
+    'Deletes the new-feature branch',
+    'Switches to the new-feature branch',
+    'Creates and switches to the new-feature branch',
+    'Creates a tag named new-feature'
+  ],
+  correctAnswer: 2,
+  explanation: 'git checkout -b creates a new branch and immediately switches to it.',
+  difficulty: 'medium'
+},
+{
+  id: '9',
+  question: 'What does "git merge" do?',
+  options: [
+    'Deletes a branch',
+    'Creates a new branch',
+    'Combines changes from one branch into another',
+    'Shows differences between branches'
+  ],
+  correctAnswer: 2,
+  explanation: 'git merge is used to combine the changes from one branch into another, typically into the current branch.',
+  difficulty: 'medium'
+},
+{
+  id: '10',
+  question: 'Which command discards all local changes in your working directory?',
+  options: [
+    'git delete',
+    'git reset --hard',
+    'git undo',
+    'git stash pop'
+  ],
+  correctAnswer: 1,
+  explanation: 'git reset --hard resets the working directory and staging area to the last commit, discarding all local changes.',
+  difficulty: 'hard'
+}
     ],
     'branching': [
         {
@@ -279,7 +344,7 @@ const categories = [
         title: 'Essential Commands',
         description: 'Working with files, commits, and repositories',
         color: 'var(--gradient-green)',
-        questions: 5,
+        questions: 10,
         difficulty: 'Intermediate',
         time: '5 min',
         topics: ['git add', 'git commit', 'git push', 'git pull'],
