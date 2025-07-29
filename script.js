@@ -415,6 +415,7 @@ function toggleTheme() {
     }
 }
 
+
 function initializeTheme() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
