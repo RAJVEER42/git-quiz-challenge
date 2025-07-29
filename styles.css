@@ -73,13 +73,58 @@
     --glass-bg: rgba(255, 255, 255, 0.85);
     --glass-border: rgba(239, 243, 244, 0.5);
     --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    
+
   }
+  
+  /* LIGHT MODE FIX */
+  
+.light .screen,
+.light .quiz-header,
+.light .quiz-content,
+.light .results-content {
+  background-color: var(--surface-card); /* light background */
+  color: var(--text-primary);
+}
+
+/* Optional: style for options if not already themed */
+.light .quiz-option,
+.light .option-container {
+  background-color: #ffffff;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+/* Hover/focus effect for light mode */
+.light .quiz-option:hover,
+.light .option-container:hover {
+  background-color: var(--surface-hover);
+}
+
+  /* Light mode header */
+.light .header {
+  background: rgba(255, 255, 255, 0.6);  /* semi-transparent white */
+  backdrop-filter: blur(15px);          /* smooth blend */
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Light mode footer */
+.light .footer {
+  background: rgba(255, 255, 255, 0.6);  /* matches page background */
+  backdrop-filter: blur(15px);
+  box-shadow: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
   
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+  
+
   
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -108,8 +153,8 @@
   
   /* Theme Toggle */
   .theme-toggle {
-    position: fixed;
-    top: 1rem;
+    position: absolute;
+    top: 0.75rem;
     right: 1rem;
     background: var(--surface-card);
     border: 1px solid var(--border);
@@ -121,8 +166,10 @@
     gap: 0.5rem;
     color: var(--muted-foreground);
     transition: all 0.3s ease;
-    z-index: 60;
+    z-index: 1000;
     font-size: 0.875rem;
+
+
   }
   
   .theme-toggle:hover {
@@ -131,18 +178,30 @@
   }
   
   /* Header */
-  .header {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 56rem;
-    background: rgba(22, 24, 28, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-    z-index: 50;
-  }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 4.5rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Dark Mode Header - Glassmorphism */
+.dark .header {
+  background: rgba(22, 24, 28, 0.95); /* dark frosted glass look */
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+  
   
   .header-content {
     display: flex;
@@ -296,13 +355,13 @@
   }
   
   .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    max-width: 32rem;
-    margin: 0 auto;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  max-width: 100rem;
+  justify-items: center;
+}
+
   .stat-card {
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
@@ -678,6 +737,7 @@
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     z-index: 30;
+    
   }
   
   .quiz-content {
@@ -793,13 +853,17 @@
     border-radius: 1rem;
     padding: 2rem;
     margin-bottom: 1.5rem;
+    
+    
   }
+  
   
   .question-header {
     display: flex;
     align-items: start;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    
   }
   
   .question-number {
@@ -995,8 +1059,9 @@
   }
   
   /* Results Screen */
+  
   .results-header {
-    position: sticky;
+    position: static;
     top: 5rem;
     background: rgba(22, 24, 28, 0.95);
     backdrop-filter: blur(20px);
@@ -1004,18 +1069,23 @@
     z-index: 30;
     margin: -1.5rem -1.5rem 2rem -1.5rem;
     padding: 1rem 1.5rem;
+    background-color: #ffffff;
   }
   
   .results-header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    
   }
   
   .results-nav {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    
+    
   }
   
   .results-nav svg {
@@ -1029,6 +1099,8 @@
     font-weight: 600;
     color: var(--foreground);
     margin: 0;
+    
+    
   }
   
   .results-content {
@@ -1037,14 +1109,15 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+    
   }
   
   .score-card {
     background: var(--surface-card);
     border: 1px solid var(--border);
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
   }
   
@@ -1318,24 +1391,46 @@
     gap: 1rem;
   }
   
-  /* Footer */
   .footer {
-    border-top: 1px solid var(--border);
-    background: rgba(22, 24, 28, 0.5);
-    backdrop-filter: blur(20px);
-    margin-top: 3rem;
-  }
-  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 4.5rem;
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark Mode Footer */
+.dark .footer {
+  background: rgba(22, 24, 28, 0.95);
+}
+
+
+
+
+/* Add this one-time helper style */
+body::after {
+  content: "";
+  display: block;
+  height: 5rem; /* same as footer height */
+}
+
+
   .footer-content {
-    max-width: 56rem;
-    margin: 0 auto;
-    padding: 1.5rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
+  max-width: 72rem;           /* sets readable content width */
+  margin: 0 auto;             /* centers it inside footer */
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
   .footer-text {
     font-size: 0.875rem;
     color: var(--muted-foreground);
@@ -1350,6 +1445,7 @@
     font-size: 0.75rem;
     color: var(--muted-foreground);
   }
+  
   
   /* Responsive Design */
   @media (min-width: 768px) {
