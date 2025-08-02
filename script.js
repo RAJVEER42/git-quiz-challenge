@@ -1050,3 +1050,24 @@ function init() {
 
 // Start the application when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
+
+// Back to Top Button Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTopBtn = document.createElement("button");
+  backToTopBtn.id = "backToTopBtn";
+  backToTopBtn.title = "Go to top";
+  backToTopBtn.textContent = "↑";
+  document.body.appendChild(backToTopBtn);
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
