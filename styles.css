@@ -57,7 +57,7 @@
   }
   
   .light {
-    --background: #ffffff;
+    --background: #fceec2;
     --foreground: #0f1419;
     --card: #ffffff;
     --card-foreground: #0f1419;
@@ -65,7 +65,7 @@
     --muted: #f7f9fa;
     --muted-foreground: #536471;
     --border: #eff3f4;
-    --surface-card: #ffffff;
+    --surface-card: #fceec2;
     --surface-hover: #f7f9fa;
     --text-primary: #0f1419;
     --text-secondary: #536471;
