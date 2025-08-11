@@ -124,3 +124,7 @@ Made with ❤️ by [@RAJVEER42](https://github.com/RAJVEER42)
 
 ---
 
+## 📄 License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./License.md)  
+This project is licensed under the terms of the MIT License.
