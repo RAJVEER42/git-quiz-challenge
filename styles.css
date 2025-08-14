@@ -1596,3 +1596,19 @@ body::after {
 #backToTopBtn:hover {
   background-color: #1e40af;
 }
+
+.singup-btn {
+  border-radius: 2rem;
+    height: 2.3rem;
+    /* margin-left: 28rem; */
+    margin-bottom: 0.8rem;
+    background-color: #070707;
+    /* color: grey; */
+    border: 0.1rem solid grey;
+    width: 5rem;
+    margin-left: 60rem;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+}
