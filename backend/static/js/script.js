@@ -1007,7 +1007,7 @@ function renderResultsScreen() {
                         </svg>
                         Share Results
                     </button>
-                    <button class="btn btn-secondary">
+                    <button class="btn btn-secondary" onclick="saveResultsAsPNG()">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                             <polyline points="7,10 12,15 17,10"/>
@@ -1071,3 +1071,14 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+function saveResultsAsPNG() {
+    const resultsContent = document.getElementById('results-content');
+    if (!resultsContent) return;
+
+    html2canvas(resultsContent, { backgroundColor: null }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'quiz-results.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    });
+}
