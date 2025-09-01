@@ -52,23 +52,6 @@ git-quiz-challenge/
 
 ---
 
-## 🛠️ Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/RAJVEER42/git-quiz-challenge.git
-cd git-quiz-challenge
-```
-
-### 2. Open the app
-
-Simply open the `index.html` file in your browser.
-
-> ✅ No setup or dependencies required — it’s a simple frontend project!
-
----
-
 ## 🌐 Live Preview (via GitHub Pages)
 
 You can deploy this project using GitHub Pages:
@@ -92,26 +75,6 @@ We welcome all contributions to improve this project!
 - **Write Responsive Code**: Make sure your UI works on all screen sizes.
 - **Avoid Duplicates**: Reuse components and functions where possible.
 - **Test Thoroughly**: Manually test all new features before submitting a PR.
-
----
-
-## 📥 Submitting a Pull Request
-
-1. **Create a new branch**:
-
-```bash
-git checkout -b feature/your-feature-name
-```
-
-2. **Commit and push your changes**:
-
-```bash
-git add .
-git commit -m "Add: your-feature-description"
-git push origin feature/your-feature-name
-```
-
-3. **Open a Pull Request** on GitHub with a clear and descriptive title.
 
 ---
 
